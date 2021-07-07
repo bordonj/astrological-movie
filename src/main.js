@@ -27,15 +27,20 @@ async function getZodiacElements(zodiacSign) {
   const colorPromise = Movie.fetchData(color)
   const compatibilityPromise = Movie.fetchData(compatibility)
   const moodPromise = Movie.fetchData(mood)
-  Promise.all([colorPromise, compatibilityPromise, moodPromise]).then(function(movieResponse) {
-    console.log('hello', movieResponse)
-    const moviesArray = movieResponse[0].data.d;
-    for(const movie of moviesArray) {
-      console.log("movis", movie.i.imageUrl)
-      $('.movieResults').append(`<img src="${movie.i.imageUrl}">`);
+  Promise.all([colorPromise, compatibilityPromise, moodPromise]).then(function(promiseResponse) {
+    let movieArray = []
+    console.log('hello', promiseResponse)
+    for (let movies of promiseResponse) {
+      console.log("movis", movies)
+      movieArray.push(movies)
+      console.log('movie index', movies)
+      for (const movie of movieArray) {
+        console.log("inner movies", movieArray)
+        $('.movieResults').append(`<img src="${movie.data.d.i.imageUrl}">`);
+      }
     }
-    console.log("movie array", moviesArray);
-    // $('.movieResults').html(firstMovieArray);
+    console.log("movie array", promiseArray);
+    $('.movieResults').html(firstMovieArray);
   });
 
 }
