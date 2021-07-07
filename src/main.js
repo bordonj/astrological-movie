@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-// import Movie from './js/movie-service';
+import Movie from './js/movie-service';
 import Zodiac from './js/astrology-service';
 
 async function getZodiacElements(zodiacSign) {
@@ -23,9 +23,42 @@ async function getZodiacElements(zodiacSign) {
   $(`#date`).text(date);
   $(`#number`).text(luckyNum);
   $(`#mood`).text(mood);
+  
+  const colorPromise = Movie.fetchData(color)
+  const compatibilityPromise = Movie.fetchData(compatibility)
+  const moodPromise = Movie.fetchData(mood)
+  Promise.all([colorPromise, compatibilityPromise, moodPromise]).then(function(movieResponse) {
+    console.log('hello', movieResponse)
+    const moviesArray = movieResponse[0].data.d;
+    for(const movie of moviesArray) {
+      console.log("movis", movie.i.imageUrl)
+      $('.movieResults').append(`<img src="${movie.i.imageUrl}">`);
+    }
+    console.log("movie array", moviesArray);
+    // $('.movieResults').html(firstMovieArray);
+  });
+
 }
 
-// call request chaining
+
+
+// color, compatibility & mood
+// get movie elements data[0].d
+
+// let getColorCompatMood = async function(color) {
+  // let color = getZodiacElements(color)
+  // let compatability =  getZodiacElements(compatability)
+  // let mood =  getZodiacElements(mood)
+
+  // Promise.all(color, compatability, mood).then
+  
+  // console.log("for movie2", data2);
+  // console.log("for movie1", data1);
+
+
+//getColorCompatMood(color);
+
+
 
 
 
