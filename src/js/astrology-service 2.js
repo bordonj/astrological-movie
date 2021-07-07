@@ -11,11 +11,11 @@ export default class Zodiac {
         'x-rapidapi-key': `${process.env.ZODIAC_API_KEY}`,
         'x-rapidapi-host': 'sameer-kumar-aztro-v1.p.rapidapi.com'
       
-      }
-    };
+    }
+      };
 
-    let data = await axios.request(options);
-    return data;
+      let data = await axios.request(options);
+      return data;
 
   } catch(error) {
     console.error(error);
