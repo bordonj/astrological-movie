@@ -25,7 +25,7 @@ async function getZodiacElements(zodiacSign) {
   $(`#mood`).text(mood);
 }
 
-
+// call request chaining
 
 
 
