@@ -18,7 +18,7 @@ export default class Zodiac {
     return data;
 
   } catch(error) {
-    console.error(error);
+    return error;
   
   }
 }
