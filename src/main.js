@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Movie from './js/movie-service';
 import Zodiac from './js/astrology-service';
-//console.log('ZODIAC KEY', process.env.ZODIAC_API_KEY);
 
 let createImg = (sign) => {
   let imgElement = document.createElement('img');
@@ -20,9 +19,7 @@ let createImg = (sign) => {
 // data.d.l is the title
 let showMovies = (data) => {
   $('.movieResults').val('');
-  console.log('in showMovies, data', data);
   for (let movie of data.data.d) {
-    console.log('movie', movie);
     if (!movie.i) {
       if (movie.q) {
         const {l, s, rank, id} = movie;
@@ -163,9 +160,7 @@ $(document).ready(function() {
         if(response instanceof Error) {
           throw Error (`Zodiac API error: ${response.message}`);
         }
-        console.log('hello', response);
         let color = response.data.color;
-        console.log('red', color);
         let compatibility = response.data.compatibility;
         let luckyTime = response.data.lucky_time;
         let description = response.data.description;

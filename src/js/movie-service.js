@@ -18,9 +18,7 @@ export default class Movie {
       return data;
       
     } catch(error) {
-      console.error(error);
+      return error;
     }
   }
 }   
-// ZODIAC_API_KEY=f307f52238msh3dcf619b228e213p15342djsn8de64caae052
-// MOVIE_API_KEY=4007d6796bmshc37bf1cb11235f7p18a959jsnaf4c26b1e51d
