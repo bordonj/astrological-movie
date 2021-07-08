@@ -2,13 +2,22 @@
 body {
   background-image: url(https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_51/3151931/191217-astrology-gets-a-bad-rap-main-kh-3151931.jpg);
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+  font-weight: bold;
+  /* position: fixed; */
 }
 .jumbotron, .results {
-  background-color: rgba(0, 0, 0, 0.729);
+  background-color: rgba(0, 0, 0, 0.838);
   min-width: 600px;
+  max-width: 1100px;
   color: white;
-  margin: 10%;
-  width: 80%;
+  margin:auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 70%;
   box-shadow: 3px 3px #f15cda;
   border-top: 3px solid #60b3f2;
   border-left: 3px solid #60b3f2;
@@ -21,22 +30,93 @@ body {
   width: 80%;
   min-width: 600px;
   margin: auto;
-  margin-top: 10%;
-  background-color: rgba(255, 255, 255, 0.818);
+  margin-top: 5%;
+  background-color: rgba(255, 255, 255, 0.921);
   padding: 5%;
   display: none;
   border-radius: 5px;
   box-shadow: 3px 3px #dac146;
 }
-select {
+select, option, #zodiacSelect {
   margin-bottom: 5%;
+  background-color: rgb(70, 70, 70);
+  color: white;
 }
 
+.movieResults {
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: greenyellow; */
+  /* align-items: center; */
+  padding: 2%;
+}
+
+.movie {
+  width: 200px;
+  /* height: 400px; */
+  margin: 1%;
+  background-color: rgb(69, 69, 69);
+  box-shadow:0 4px 2px rgb(236, 25, 255);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.movie-info {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: rgb(236, 25, 255);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+/* may not use below bc not adding scores */
+.movie-info span.green {
+  color: lightblue;
+}
+
+.overview {
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
 
 /* text styles */
+#people, #type {
+  color: black;
+}
 .jumbotron h1 {
   text-align: center;
   font-family: 'Zen Tokyo Zoo', cursive;
+}
+.welcome {
+  color: #d470f0;
+}
+.results h1 {
+  color:rgb(73, 185, 254);
+  text-shadow: 2px 3px #d470f0;
 }
 .start {
   text-align: center;
@@ -52,6 +132,12 @@ select {
   font-family: 'Zen Tokyo Zoo', cursive;
   cursor: pointer;
 
+}
+.results p {
+  color: #d281e8;
+}
+span {
+  color: white;
 }
 
 .start:hover {
@@ -78,7 +164,10 @@ select {
 
 
 /* media/images */
-
+.movieResults img {
+  width: 100%;
+  height: 300px;
+}
 
 button, button::after {
   display: block;
@@ -167,4 +256,29 @@ button:hover::after {
     clip-path: var(--slice-1);
     transform: translate(0);
   }
+}
+
+blockquote {
+  font-size: 30px;
+  font-style: italic;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: .5em 10px;
+  padding: 0 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
+  border-radius: 100px;
+}
+
+blockquote:before {
+  content: open-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: -10px;
+  position: relative;
+  top: 30px;
+  color: #ccc;
+  font-size: 3em;
 }
