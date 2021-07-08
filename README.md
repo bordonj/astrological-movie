@@ -22,7 +22,7 @@ ___
 ___
 ## Description :pencil2:
 * _The Astrological Interests Selector application consumes two APIs, Aztro and imdb. Aztro API provides data utilised to make the second call request to imdb API._
-* _
+* _The imdb API response uses mood, compatability and color from the first call to retrieve information based on the user Zodiac_
 ___
 ## Setup/Installation Requirements :triangular_ruler:
 * Clone this project `git clone https://github.com/bordonj/astrological-movie.git` into your preferred directory
