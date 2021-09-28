@@ -1,0 +1,80 @@
+<html lang="en-US">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">  
+</head>
+<body>
+  <div class='jumbotron'>
+    <h1 class="welcome">WELCOME</h1>
+    <p>
+      Do you ever find yourself having difficulty thinking about what to bingewatch (and waste more of your life avoiding your responsibilities)? Well, you're just hit the jackpot because now you don't have to be the one in charge of choosing what to procrastinate with!
+    </p>
+    <p>
+      This is an application that combines astrology with series/movies/actors to help you find potential interests! To begin, you can click "GET STARTED" on the bottom right corner of this page.
+    </p>
+    <div class='start'>
+      <h1>GET STARTED</h1>
+    </div>
+  </div>
+
+  <div class='form'>
+    <h1>Zodiac</h1>
+    <p>
+      Hopefully you know about zodiac signs. If not, you can click <a href='https://www.astrology-zodiac-signs.com/'>here</a> to find out more about them!
+    </p>
+    <p>
+      Our app uses the latest technology that matches possible interests you'd have, given your zodiac sign. If you could please input your zodiac sign, we will calculate your top matches!
+    </p>
+    <form id='zodiac'>
+      <select class="custom-select" id="zodiacSelect" required>
+        <option value="" disabled selected>Choose one please</option>
+        <option value="Aquarius">Aquarius: January 20 - February 18</option>
+        <option value="Pisces">Pisces: February 19 - March 20</option>
+        <option value="Aries">Aries: March 21 - April 19</option>
+        <option value="Taurus">Taurus: April 20 - May 20</option>
+        <option value="Gemini">Gemini: May 21 - June 20</option>
+        <option value="Cancer">Cancer: June 21 - July 22</option>
+        <option value="Leo">Leo: July 23 - August 22</option>
+        <option value="Virgo">Virgo: August 23 - September 22</option>
+        <option value="Libra">Libra: September 23 - October 22</option>
+        <option value="Scorpio">Scorpio: October 23 - November 21</option>
+        <option value="Sagittarius">Sagittarius: November 22 - December 21</option>
+        <option value="Capricorn">Capricorn: December 22 - January 19</option>
+      </select>
+          <button type='submit'>GRAB MY INTERESTS</button>
+    </form>
+  </div>
+
+  <div class='results'>
+    <h1>--Zodiac Table--</h1>
+    <div class='zodiacResults'>
+      <h2><span id='zodiacInput'></span></h2>
+      <blockquote>
+        <p class="quotation">
+        </p>
+      </blockquote>
+      <p>Date range: <span id="date"></span></p>
+      <p>Your zodiac color is: <span id="color"></span></p>
+      <p>Your zodiac compatibility is: <span id="compatibility"></span></p>
+      <p>Your lucky time is: <span id="time"></span></p>
+      <p>Your lucky number is: <span id="number"></span></p>
+      <p>Mood: <span id="mood"></span></p>
+    </div>
+
+
+    <h1>--Potential matches--</h1>
+    <div class="movieResults">
+
+    </div>
+
+    <a href="./index.html"><button id="restart">RESTART</button></a>
+  </div>
+
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
