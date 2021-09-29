@@ -11,7 +11,7 @@ ___
 ___
 ## Sample of App
 <img src="astro-gif.gif">
-___
+
 ## Technologies Used :floppy_disk:
 
 |  |  |
