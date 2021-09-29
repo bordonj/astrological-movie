@@ -9,7 +9,9 @@ ___
  * **Gurshan Kaile**
  * **Kevin Funez**
 ___
-
+## Sample of App
+<img src="astro-gif.gif">
+__
 ## Technologies Used :floppy_disk:
 
 |  |  |
